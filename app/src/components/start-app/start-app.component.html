@@ -1,0 +1,42 @@
+<div layout="column" flex>
+
+  <!-- Container #1 (see wireframe) -->
+  <md-toolbar layout="row" class="md-toolbar-tools">
+    <h1>Padawan Trial</h1>
+  </md-toolbar>
+
+  <!-- Container #2 -->
+  <div flex layout="row">
+
+    <!-- Container #3 -->
+    <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-4dp"
+                md-component-id="left">
+    </md-sidenav>
+
+    <!-- Container #4 -->
+    <md-content flex id="content">
+      <button ng-show="!canDisplayAddSaleForm" ng-click="displayAddSaleForm()">New Sale</button>
+      <br/>
+      <div ng-show="canDisplayAddSaleForm">
+        <div>
+          <h3>New Sale:</h3>
+          <p><label>Name: <input type="text" ng-model="sale.id" /></label></p>
+          <p><label>Name: <input type="text" ng-model="sale.title" /></label></p>
+          <p><label>Name: <input type="text" ng-model="sale.description" /></label></p>
+          <button ng-click="addNewSale(sale)">Save</button>
+        </div>
+      </div>
+      <br/>
+      <input type="text" ng-model="searchValue" />
+      <div ng-repeat="s in sales|filter:{title:searchValue}">
+        <h2>Sale:</h2>
+        <p><b>ID:</b> {{s.id}}</p>
+        <p><b>Title:</b> {{s.title}}</p>
+        <p><b>Description:</b> {{s.description}}</p>
+      </div>
+      
+    </md-content>
+
+  </div>
+
+</div>

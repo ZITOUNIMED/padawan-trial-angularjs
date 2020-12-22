@@ -1,0 +1,29 @@
+{
+  "name": "padawan-trial",
+  "version": "0.1.0",
+  "private": true,
+  "author": "interencheres",
+  "scripts": {
+    "start": "live-server --open=app",
+    "server": "json-server --watch db.json"
+  },
+  "dependencies": {
+    "@types/angular": "^1.6.56",
+    "@types/angular-animate": "^1.5.10",
+    "@types/angular-material": "^1.1.68",
+    "@types/jquery": "^3.3.31",
+    "angular": "^1.7.8",
+    "angular-animate": "^1.7.8",
+    "angular-aria": "^1.7.8",
+    "angular-material": "github:angular/bower-material",
+    "angular-messages": "^1.7.8",
+    "angular-sanitize": "^1.7.8",
+    "angular-ui-router": "^0.2.18",
+    "json-server": "^0.16.1",
+    "systemjs": "^0.19.45",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
